@@ -1,0 +1,14 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node -r dotenv/config src/server.js dotenv_config_path=../.env"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "graphql-yoga": "^1.18.3",
+    "mongoose": "^5.8.11"
+  }
+}
