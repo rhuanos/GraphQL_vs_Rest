@@ -3,10 +3,11 @@ const User = require('../models/User');
 module.exports = {
   Query: {
     users: () => User.find(),
-    user: (_, { id }) => User.findById(id),
+    user: (_, { id }) => User.findById(id)
   },
 
   Mutation: {
-    createUser: (_, { name, email }) => User.create({name, email }),
-  },
+    createUser: (_, { username, first_name, last_name, email, password }) =>
+    User.create({ username, first_name, last_name, email, password })
+  }
 };

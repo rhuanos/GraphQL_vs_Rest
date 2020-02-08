@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI_REST, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -16,4 +16,4 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-server.listen(3333);
+app.listen(3333);

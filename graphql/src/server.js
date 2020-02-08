@@ -3,7 +3,7 @@ const path = require('path');
 const resolvers = require('./controllers/resolvers')
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI_GRAP, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -17,4 +17,4 @@ const server = new GraphQLServer({
 
 
 
-server.start();
+server.start({port: 3334});
