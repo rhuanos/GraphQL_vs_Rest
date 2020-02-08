@@ -1,7 +1,10 @@
 type User {
   id: ID!
-  name: String!
+  username: String!
+  first_name: String!
+  last_name: String!
   email: String!
+  password: String!
 }
 
 type Query {
@@ -10,5 +13,11 @@ type Query {
 }
 
 type Mutation {
-  createUser(name: String!, email: String!): User
+  createUser(
+    username: String!, 
+    first_name: String!, 
+    last_name: String!, 
+    email: String!, 
+    password: String!
+  ): User
 }
