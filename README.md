@@ -15,6 +15,15 @@ cd graphql && yarn install
 cd ..
 cd rest && yarn install
 ```
+De volta a pasta raiz execute:
+```bash
+cp .env.example .env
+```
+Em seguida altere as duas linhas do arquivo .env criado
+```bash
+vim .env
+```
+
 
 Para iniciar a api **GraphQL** utilize os comandos:
 ```bash
